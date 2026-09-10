@@ -1,0 +1,2 @@
+import type {KnowledgeGraphView} from '../../contracts/knowledgeGraph';
+export function FocusedKnowledgePath({graph}:{graph:KnowledgeGraphView}):JSX.Element{return<ol className="focused-path" aria-label="当前点、前置与下一步聚焦路径">{graph.nodes.map((node,index)=><li key={node.id}><span>{index===0?'前置':index===graph.nodes.length-1?'当前证据':'当前点'}</span><strong>{node.label}</strong><small>{node.evidenceState} · 来源 {node.sourceRef}</small></li>)}</ol>}

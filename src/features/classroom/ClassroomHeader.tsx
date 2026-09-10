@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom';import ArrowBackOutlined from '@mui/icons-material/ArrowBackOutlined';import {useLearningSession} from '../../state/LearningSessionProvider';
+export function ClassroomHeader():JSX.Element{const{state}=useLearningSession();return<header className="classroom-header"><Link to="/library"><ArrowBackOutlined fontSize="small"/>教材库</Link><div><strong>{state.textbook?.title??'本地 PDF 学习'}</strong><span>{state.lessonId??'手工页文本上下文'} · 约 15 分钟</span></div><span className="phase">{state.phase}</span></header>}

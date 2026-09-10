@@ -1,0 +1,2 @@
+import type {LessonStep} from '../../contracts/learning';import {SafeText} from '../../components/SafeText';
+export function LessonStepCard({step,index,total}:{step:LessonStep;index:number;total:number}):JSX.Element{return<article className="lesson-step"><p className="eyebrow">微课堂步骤 {index+1} / {total} · 前端演示</p><h2>{step.title}</h2><SafeText text={step.body} as="p"/><aside><strong>现在只做这一件事</strong><SafeText text={step.action} as="p"/></aside><small>{step.visualCue}</small></article>}

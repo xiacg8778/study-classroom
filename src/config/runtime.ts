@@ -1,0 +1,1 @@
+export const runtimeConfig = Object.freeze({ aiMode: (import.meta.env.VITE_AI_MODE==='ai'?'ai':'off') as 'ai'|'off', executionMode: 'local-demo' as const, allowHostModeSwitch: false, persistence: 'session-only' as const, debugContentLogging: false });

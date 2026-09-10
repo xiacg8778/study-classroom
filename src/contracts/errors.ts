@@ -1,0 +1,2 @@
+export type AdapterErrorCode = 'INVALID_REQUEST' | 'CONSENT_REQUIRED' | 'RIGHTS_UNVERIFIED' | 'SAFETY_BLOCKED' | 'CAPABILITY_DISABLED' | 'HOST_COMMIT_UNAVAILABLE' | 'HOST_COMMIT_UNREACHABLE' | 'HOST_COMMIT_REJECTED' | 'VERSION_CONFLICT' | 'IDEMPOTENCY_CONFLICT' | 'VALIDATION_FAILED' | 'PDF_LIMIT_EXCEEDED' | 'PDF_PARSE_FAILED' | 'TTS_UNAVAILABLE';
+export interface AdapterError { code: AdapterErrorCode; message: string; retryable: boolean; fieldErrors?: Record<string, string>; currentContextVersion?: number; requestId: string; correlationId: string; }

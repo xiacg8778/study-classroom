@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+.npm-cache/
+
+# 构建产物
+dist/
+*.tsbuildinfo
+
+# 测试产物
+test-results/
+playwright-report/
+coverage/
+
+# 环境变量（构建期开关；用 .env.example 提供模板，避免将来误提交密钥）
+.env
+.env.*
+!.env.example
+
+# 编辑器 / 系统
+.DS_Store
+.vite/
+*.log

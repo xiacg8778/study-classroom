@@ -1,0 +1,9 @@
+import{lazy,Suspense} from 'react';import {BrowserRouter,Navigate,Route,Routes} from 'react-router-dom';import {AppShell} from '../components/AppShell';import {ConsentPage} from '../features/onboarding/ConsentPage';import {RouteErrorBoundary} from '../components/RouteErrorBoundary';
+
+/** 懒加载带一次自动重试：弱网瞬断时先重试一次，仍失败再交给 ErrorBoundary 降级 */
+const lazyWithRetry=(load:()=>Promise<unknown>,label:string)=>lazy(async()=>{
+  const tryLoad=async():Promise<{default:React.ComponentType}>=>{const mod=await load();return{default:(mod as{[k:string]:React.ComponentType})[label]};};
+  try{return await tryLoad();}catch(first){console.warn(`[lazy] ${label} 首次加载失败，重试一次`,first);return await tryLoad();}
+});
+const LibraryPage=lazyWithRetry(()=>import('../features/library/LibraryPage'),'LibraryPage');const ClassroomPage=lazyWithRetry(()=>import('../features/classroom/ClassroomPage'),'ClassroomPage');const WrongQuestionPage=lazyWithRetry(()=>import('../features/wrong-questions/WrongQuestionPage'),'WrongQuestionPage');const KnowledgeGraphPage=lazyWithRetry(()=>import('../features/knowledge-graph/KnowledgeGraphPage'),'KnowledgeGraphPage');const DataControlPage=lazyWithRetry(()=>import('../features/data-control/DataControlPage'),'DataControlPage');
+export function AppRouter():JSX.Element{return<BrowserRouter><AppShell><RouteErrorBoundary><Suspense fallback={<p role="status">正在加载页面…</p>}><Routes><Route path="/" element={<ConsentPage/>}/><Route path="/library" element={<LibraryPage/>}/><Route path="/classroom" element={<ClassroomPage/>}/><Route path="/wrong-questions" element={<WrongQuestionPage/>}/><Route path="/knowledge-graph" element={<KnowledgeGraphPage/>}/><Route path="/settings" element={<DataControlPage/>}/><Route path="*" element={<Navigate to="/" replace/>}/></Routes></Suspense></RouteErrorBoundary></AppShell></BrowserRouter>}

@@ -1,0 +1,1 @@
+export function SkipLink():JSX.Element{return<a href="#main-content" tabIndex={0} style={{position:'absolute',left:8,top:8,zIndex:9999,padding:12,background:'var(--ink)',color:'var(--paper)',transform:'translateY(-160%)'}} onFocus={(e)=>{e.currentTarget.style.transform='none'}} onBlur={(e)=>{e.currentTarget.style.transform='translateY(-160%)'}}>跳到主要内容</a>}

@@ -1,0 +1,10 @@
+import {useState} from 'react';import {Button} from '@mui/material';import ArrowForwardOutlined from '@mui/icons-material/ArrowForwardOutlined';import ExpandMoreOutlined from '@mui/icons-material/ExpandMoreOutlined';import type {Textbook,Lesson} from '../../contracts/textbook';import {RightsStatus} from './RightsStatus';
+export function TextbookPicker({textbooks,onSelect}:{textbooks:Textbook[];onSelect:(book:Textbook,lessonId?:string)=>void}):JSX.Element{
+  const[expandedId,setExpandedId]=useState<string|null>(null);
+  const pickLesson=(book:Textbook,lesson:Lesson):void=>{onSelect(book,lesson.lessonId);};
+  return<div className="book-list">{textbooks.map((book,index)=><article key={book.textbookId} className="book-row"><span className="book-index">0{index+1}</span><div>
+  <p className="eyebrow">{book.grade} · {book.subject}</p><h2>{book.title}</h2><p>{book.edition} / {book.attribution.sourceName}</p><RightsStatus status={book.rightsStatus}/><p className="license">{book.attribution.licenseNote}</p>
+  {book.lessons.length>1&&book.rightsStatus==='authorized-demo'&&<div className="lesson-toggle"><Button size="small" startIcon={<ExpandMoreOutlined/>} onClick={()=>setExpandedId(expandedId===book.textbookId?null:book.textbookId)}>本册目录（{book.lessons.length} 课）</Button></div>}
+  {expandedId===book.textbookId&&<ul className="lesson-list">{book.lessons.map((lesson,lessonIndex)=><li key={lesson.lessonId}><span className="lesson-index">{String(lessonIndex+1).padStart(2,'0')}</span><span className="lesson-title">{lesson.title}</span><Button size="small" endIcon={<ArrowForwardOutlined/>} onClick={()=>pickLesson(book,lesson)}>打开这一课</Button></li>)}</ul>}
+  </div>{book.lessons.length>1&&book.rightsStatus==='authorized-demo'?<Button endIcon={<ArrowForwardOutlined/>} disabled={book.rightsStatus!=='authorized-demo'} onClick={()=>setExpandedId(expandedId===book.textbookId?null:book.textbookId)}>选一课</Button>:<Button endIcon={<ArrowForwardOutlined/>} disabled={book.rightsStatus!=='authorized-demo'} onClick={()=>onSelect(book)}>打开这一课</Button>}</article>)}</div>;
+}

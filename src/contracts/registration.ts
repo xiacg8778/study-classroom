@@ -1,0 +1,3 @@
+export interface Mutation { entity: 'evidence' | 'wrong-question' | 'next-lesson'; operation: 'propose'; referenceId: string; }
+export interface RegistrationProposal { schemaVersion: 'registration-proposal@1.0.0'; proposalId: string; workspaceId: string; learnerId: string; sessionId: string; baseContextVersion: number; evidenceCursor: string; promptBundleRef: string; idempotencyKey: string; mutations: Mutation[]; persistenceIntent: 'propose'; }
+export interface PrepareRegistrationCommand { requestId: string; idempotencyKey: string; identity: import('./identity').IdentityContext; closeProposal: import('./learning').CloseUnitProposal; }

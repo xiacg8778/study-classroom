@@ -1,0 +1,1 @@
+export function MobileTaskRail({children}:{children:React.ReactNode}):JSX.Element{return<section className="mobile-task-rail" aria-label="当前任务轨道"><p className="eyebrow">当前唯一动作</p>{children}</section>}

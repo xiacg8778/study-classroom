@@ -1,0 +1,1 @@
+export function DesktopLearningDesk({contents,canvas,task}:{contents:React.ReactNode;canvas:React.ReactNode;task:React.ReactNode}):JSX.Element{return<div className="learning-desk"><aside className="desk-contents">{contents}</aside><div className="desk-canvas">{canvas}</div><aside className="desk-task" aria-label="当前任务轨道">{task}</aside></div>}

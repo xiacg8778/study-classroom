@@ -1,0 +1,5 @@
+import {test,expect} from '@playwright/test';
+import {expandFirstTextbook} from './helpers';
+/* 移动端触控验证：保留 touchstart 观测（证明 tap 生效），并在打开课程前展开目录——
+   教材库引入「本册目录」折叠后，未展开时不存在「打开这一课」按钮。 */
+test('mobile has sticky task rail without horizontal overflow',async({page,hasTouch})=>{test.skip((page.viewportSize()?.width??1280)>767,'仅移动视口执行');await page.goto('/');const consent=page.getByLabel(/我已了解/);const choose=page.getByRole('button',{name:/为学习者 A/});if(hasTouch){await page.evaluate(()=>document.addEventListener('touchstart',()=>{document.documentElement.dataset.touchObserved='true';},{once:true}));await consent.tap();await expect(page.locator('html')).toHaveAttribute('data-touch-observed','true');await expect(consent).toBeChecked();await choose.tap();}else{await consent.check();await choose.click();}await expandFirstTextbook(page,hasTouch);const lesson=page.getByRole('button',{name:'打开这一课'}).first();if(hasTouch)await lesson.tap();else await lesson.click();await expect(page.getByLabel('当前任务轨道')).toBeVisible();const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth);expect(overflow).toBe(false)});

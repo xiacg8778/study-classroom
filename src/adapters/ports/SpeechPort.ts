@@ -1,0 +1,1 @@
+export interface SpeechPort { supported():boolean; speak(text:string):void; /* 分段朗读（标题/正文/选项分开发音，段间停顿）；不支持时实现应回退 join 后的 speak */ speakSegments?(segments:string[]):void; /* 朗读自然结束回调；返回退订函数 */ onEnd?(listener:()=>void):()=>void; pause():void; resume():void; stop():void; setMuted(muted:boolean):void; }

@@ -1,0 +1,1 @@
+export const contentPolicy = Object.freeze({ maxPdfBytes: 50 * 1024 * 1024, maxPdfPages: 300, maxImageBytes: 12 * 1024 * 1024, maxImageDimension: 8192, maxImagePixels: 20_000_000, maxOcrPixels: 8_000_000, maxMaterialChars: 6000, version: 'minor-safety@1.1.0' });

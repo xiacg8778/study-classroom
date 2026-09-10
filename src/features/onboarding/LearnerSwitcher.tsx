@@ -1,0 +1,2 @@
+import {FormControl,InputLabel,MenuItem,Select} from '@mui/material';import {useLearningSession} from '../../state/LearningSessionProvider';
+export function LearnerSwitcher():JSX.Element{const{state,switchLearner}=useLearningSession();return<FormControl size="small"><InputLabel id="learner-label">当前学习者</InputLabel><Select labelId="learner-label" label="当前学习者" value={state.identity.learnerId} onChange={(e)=>void switchLearner(e.target.value)}><MenuItem value="learner-a">学习者 A</MenuItem><MenuItem value="learner-b">学习者 B</MenuItem></Select></FormControl>}

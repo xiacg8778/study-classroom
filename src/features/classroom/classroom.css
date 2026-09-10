@@ -1,0 +1,105 @@
+.classroom-header{min-height:64px;padding:10px 22px;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:18% 54% 28%;align-items:center}.classroom-header>a{display:flex;align-items:center;gap:5px}.classroom-header>div{display:flex;flex-direction:column}.phase{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--pine)}.learning-desk{display:grid;grid-template-columns:18% minmax(0,54%) 28%;min-height:calc(100vh - 210px)}.desk-contents,.desk-canvas,.desk-task{padding:clamp(18px,2.5vw,42px);min-width:0}.desk-contents,.desk-canvas{border-right:1px solid var(--line)}.reader-page>header{border-bottom:3px double var(--ink)}.reader-page>header span{font-size:.7rem;letter-spacing:.14em}.reader-page h2{font-size:clamp(2.2rem,5vw,4.7rem);line-height:1}.reader-page section{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:28px 0;border-bottom:1px solid var(--line);font:1.18rem var(--display)}.margin-note{color:var(--vermilion)}.learning-prompt{display:grid;gap:14px}.image-ocr{display:grid;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--line)}.image-ocr .small-note{margin:0;font-size:.78rem;color:var(--pine)}.quick-actions{display:flex;flex-wrap:wrap}.lesson-step h2{font-size:clamp(2.5rem,6vw,5rem);line-height:.95}.lesson-step aside{border-left:8px solid var(--annotation);padding:10px 18px;margin:28px 0}.limitation{border:1px solid var(--vermilion);padding:12px}.restatement{display:grid;gap:18px}.pdf-import{display:grid;gap:10px}.pdf-reader{display:grid;gap:14px}.pdf-reader-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;padding-bottom:10px;border-bottom:3px double var(--ink)}.pdf-reader-heading h3{margin:2px 0 0}.pdf-kicker{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--pine)}.pdf-reader-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pdf-page-form{display:flex;align-items:center;gap:8px}.pdf-page-form .MuiTextField-root{width:112px}.bookmark-toggle{margin-left:auto}.thumbnail-toggle{margin-left:8px}.pdf-thumbnails{display:flex;gap:10px;overflow-x:auto;padding:10px 2px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);scrollbar-width:thin}.pdf-thumbnail{display:grid;gap:4px;justify-items:center;padding:6px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;font:inherit}.pdf-thumbnail canvas{display:block;width:96px;height:auto;margin:0}.pdf-thumbnail span{font-size:.72rem;letter-spacing:.08em}.pdf-thumbnail-active{border:2px solid var(--pine);box-shadow:inset 0 0 0 1px var(--pine)}.pdf-thumbnails-note{flex:0 0 auto;align-self:center;margin:0 12px 0 4px;font-size:.72rem;color:var(--pine)}.pdf-search{display:grid;gap:8px;border-left:6px solid var(--annotation);padding:10px 0 10px 14px}.pdf-search .MuiInputBase-root{gap:8px}.pdf-search-results{display:grid;gap:6px}.pdf-search-results ol{display:grid;gap:4px;margin:0;padding-left:20px}.pdf-search-results li{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:8px}.pdf-search-results li>span{font-size:.85rem;overflow-wrap:anywhere}.pdf-bookmarks{display:grid;gap:6px;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.pdf-bookmarks>div{display:flex;gap:6px;flex-wrap:wrap}.context-diagnostic{margin:0;font-size:.78rem;color:var(--pine)}.context-highlights ul{display:grid;gap:4px;margin:4px 0 0;padding-left:18px}.context-highlights li{font-size:.82rem;background:var(--annotation);padding:2px 6px;overflow-wrap:anywhere}.pdf-page-text{display:grid;gap:6px;padding:10px 0;border-top:1px solid var(--line)}.pdf-page-text p{margin:0;font-size:.85rem;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;max-height:180px;overflow:auto;border:1px solid var(--line);padding:8px 10px;background:var(--paper)}.pdf-text-highlight{background:var(--annotation);color:var(--ink);padding:0 2px}
+.context-selection{display:grid;gap:8px}.context-actions{display:flex;gap:8px;flex-wrap:wrap}.pdf-highlights{display:grid;gap:6px;padding:10px 0;border-top:1px solid var(--line)}.pdf-highlights ul{display:grid;gap:6px;margin:0;padding-left:18px}.pdf-highlights li{display:grid;grid-template-columns:1fr auto auto;gap:6px;align-items:baseline}.pdf-highlights li>span{background:var(--annotation);padding:2px 6px;font-size:.85rem;overflow-wrap:anywhere}.pdf-highlight-current>span{outline:2px solid var(--pine)}.pdf-reading-progress{display:grid;gap:6px;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.pdf-reading-progress p{margin:0;font-size:.85rem}.pdf-progress-actions{display:flex;gap:8px;flex-wrap:wrap}.pdf-progress-note{font-size:.75rem;color:var(--pine)}.pdf-reader canvas{display:block;max-width:100%;height:auto;margin:0 auto;border:1px solid var(--line)}@media(max-width:1023px){.learning-desk{grid-template-columns:minmax(0,65%) 35%}.desk-contents{display:none}.classroom-header{grid-template-columns:25% 55% 20%}}@media(max-width:767px){.classroom-header{position:sticky;top:0;z-index:5;background:var(--paper);grid-template-columns:25% 58% 17%;font-size:.76rem}.learning-desk{display:block;min-height:auto}.desk-canvas{border:0;padding:22px 18px}.desk-task{display:block;position:sticky;bottom:0;background:var(--paper);border-top:4px solid var(--ink);padding:16px 18px;z-index:4;max-height:55vh;overflow:auto}.reader-page h2{font-size:2.7rem}.reader-page section{font-size:1.05rem}.pdf-reader-heading{align-items:start;flex-direction:column;gap:5px}.bookmark-toggle{margin-left:0}.pdf-search-results li{grid-template-columns:1fr}.pdf-page-form{flex:1}.pdf-page-form .MuiTextField-root{min-width:96px;flex:1}}
+/* 区域划线（无文本层扫描页）：画布容器可框选，归一化坐标叠加渲染 */
+.pdf-canvas-wrap{position:relative;display:inline-block;max-width:100%;margin:0 auto}
+.pdf-canvas-wrap .pdf-region-highlight{position:absolute;background:rgba(232,195,90,.38);border:1.5px solid var(--annotation);pointer-events:auto}
+.pdf-canvas-wrap .pdf-region-remove{position:absolute;top:-9px;right:-9px;width:18px;height:18px;line-height:16px;padding:0;border:1px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font-size:.72rem;cursor:pointer}
+.pdf-canvas-wrap .pdf-region-draft{position:absolute;border:1.5px dashed var(--pine);background:rgba(47,107,87,.12);pointer-events:none}
+.pdf-canvas-region-mode{cursor:crosshair;touch-action:none}
+.pdf-region-note{margin:0;font-size:.78rem;color:var(--pine)}
+.pdf-region-highlights{display:grid;gap:6px;padding:10px 0;border-top:1px solid var(--line)}
+.pdf-region-highlights ul{display:grid;gap:6px;margin:0;padding-left:18px}
+.pdf-region-highlights li{display:grid;grid-template-columns:1fr auto auto;gap:6px;align-items:baseline}
+.pdf-region-highlights li>span{background:rgba(232,195,90,.38);padding:2px 6px;font-size:.85rem;overflow-wrap:anywhere}
+.pdf-region-highlights .pdf-highlight-current>span{outline:2px solid var(--pine)}
+
+/* AI 生成内容标识：蓝紫色边注，与本地演示(limitation 橙红)区分 */
+.ai-note{border-left:8px solid #534AB7;padding:8px 14px;margin:10px 0;font-size:.8rem;color:var(--pine);background:#EEEDFE}
+/* 学习者问题回显：中性灰蓝，标明「这是你问的」 */
+.learner-question{border-left:8px solid #6B7A8F;padding:8px 14px;margin:10px 0;font-size:.85rem;color:#3A4656;background:#EEF2F6;font-weight:600}
+
+
+/* ===== OpenMAIC 课件演示动画 ===== */
+.courseware-demo{margin:14px 0;border:1px solid #E4DCC8;border-radius:10px;background:#FDFBF4;padding:10px 12px}
+.demo-svg{width:100%;max-width:420px;display:block;margin:0 auto}
+.demo-figure{margin:0}
+.demo-caption{font-size:.78rem;color:#6B6455;margin-top:4px;text-align:center}
+.d-num{font-size:30px;font-weight:600;fill:#20231F;font-family:var(--font-ui,inherit)}
+.d-op{font-size:28px;fill:#2F6B57;font-weight:600}
+.d-line{stroke:#20231F;stroke-width:2.5}
+.d-res{font-size:30px;font-weight:700;fill:#2F6B57}
+.d-box{fill:none;stroke:#E8C35A;stroke-width:3;rx:6}
+.d-carry{font-size:20px;fill:#D96C3B;font-weight:700}
+.d-carry-inline{font-size:16px;fill:#D96C3B}
+.d-note{font-size:15px;fill:#6B6455}
+.d-note.strong{font-size:20px;fill:#20231F;font-weight:700}
+.d-arrow{fill:none;stroke:#D96C3B;stroke-width:2;marker-end:none;stroke-dasharray:5 3}
+.d-arrow.green{stroke:#2F6B57}
+.d-chip-rect.yellow{fill:#E8C35A;stroke:#D9A93A;stroke-width:1.5}
+.d-chip-rect.plain{fill:#F0EBDD;stroke:#C9C0AA;stroke-width:1.5}
+.d-chip-num{font-size:19px;font-weight:700;fill:#20231F}
+.d-ten{fill:#2F6B57;font-weight:700}
+.dim{opacity:.35}
+.demo-cell{display:inline-block}
+/* 互动卡与互动区 */
+.interactive-step{border-left:4px solid #534AB7}
+.interaction-area{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.interaction-ack{font-size:.85rem;color:#2e7d32;font-weight:600}
+.interaction-error{font-size:.85rem;color:#D96C3B}
+
+.d-carry-small{font-size:16px;fill:#D96C3B;font-weight:600}
+.d-dot{fill:#D5CEBD}
+.d-dot.on{fill:#2F6B57}
+.d-group-rect{fill:#FBF8EF;stroke:#D5CEBD;stroke-width:1.5}
+.d-group-rect.on{fill:#F3F1E4;stroke:#534AB7;stroke-width:1.8}
+.step-reveal-list{list-style:none;margin:8px 0;padding:0}
+.step-reveal-list li{display:flex;gap:8px;align-items:baseline;padding:7px 10px;margin:5px 0;border-radius:8px;font-size:.95rem;transition:opacity .4s}
+.step-reveal-list li.revealed{background:#FDFBF4;color:#20231F}
+.step-reveal-list li.pending{background:#F4F0E6;color:#B9B2A0}
+.step-reveal-index{display:inline-flex;width:22px;height:22px;border-radius:50%;background:#534AB7;color:#fff;align-items:center;justify-content:center;font-size:.75rem;flex:none}
+
+/* 朗读条：低年级学生需要一眼看到、一点就读——浅底+描边，与正文区分 */
+.tts-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:10px 14px;margin:12px 0;border:1px solid var(--pine);border-radius:8px;background:var(--annotation)}
+.tts-bar-label{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;color:var(--pine);font-weight:500}
+.tts-bar-auto{margin-left:auto}
+.tts-unsupported{font-size:.82rem;color:var(--pine)}
+/* 说明与边界：默认折叠，避免把朗读条与主内容挤出首屏 */
+.lesson-notes{margin:10px 0}
+.lesson-notes>summary{cursor:pointer;font-size:.8rem;color:var(--pine);padding:4px 0}
+.lesson-notes>summary:hover{text-decoration:underline}
+.lesson-notes .ai-note,.lesson-notes .limitation{margin:8px 0}
+
+/* 教材正文：段落级朗读按钮落在正文列（reader-page section 是 46px+1fr 两列网格） */
+.reader-page section>.reader-speak{grid-column:2;justify-self:start;margin-top:6px}
+
+/* ---------- 语文专属演示：关键词圈画 ---------- */
+.kw-read{display:grid;gap:10px}
+.kw-sentence{margin:0;font:1.08rem/2 var(--display);color:#20231F}
+.kw-hit{background:transparent;color:inherit;padding:0 2px;border-radius:4px;transition:background .35s,box-shadow .35s}
+.kw-hit.on{background:#E8C35A;box-shadow:0 0 0 2px #E8C35A}
+.kw-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kw-list li{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-size:.9rem;transition:opacity .4s}
+.kw-list li.revealed{background:#FDFBF4;color:#20231F;border:1px solid #2F6B57}
+.kw-list li.pending{background:#F4F0E6;color:#B9B2A0;border:1px solid transparent}
+.kw-index{display:inline-flex;width:20px;height:20px;border-radius:50%;background:#2F6B57;color:#fff;align-items:center;justify-content:center;font-size:.72rem;flex:none}
+.kw-conclusion{margin:0;font-size:.9rem;color:#2F6B57}
+
+/* ---------- 语文专属演示：事件顺序 ---------- */
+.seq-wrap{display:grid;gap:10px}
+.seq-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.seq-list li{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border-radius:8px;font-size:.95rem;transition:opacity .4s}
+.seq-list li.revealed{background:#FDFBF4;color:#20231F;border-left:4px solid #D96C3B}
+.seq-list li.pending{background:#F4F0E6;color:#B9B2A0;border-left:4px solid #E4DCC8}
+.seq-index{display:inline-flex;width:22px;height:22px;border-radius:50%;background:#D96C3B;color:#fff;align-items:center;justify-content:center;font-size:.75rem;flex:none;margin-top:1px}
+.seq-text{flex:1}
+.seq-conclusion{margin:0;font-size:.9rem;color:#2F6B57}
+
+/* ---------- 语文专属演示：句子扩写 ---------- */
+.build-wrap{display:grid;gap:8px}
+.build-step{display:grid;gap:4px;padding:9px 12px;border-radius:8px;transition:opacity .4s}
+.build-step.done{background:#FDFBF4;color:#20231F;border-left:4px solid #2F6B57}
+.build-step.pending{background:#F4F0E6;color:#B9B2A0;border-left:4px solid #E4DCC8}
+.build-step p{margin:0;font-size:.98rem;line-height:1.6}
+.build-tag{font-size:.72rem;letter-spacing:.06em;color:#2F6B57}
+.build-step.pending .build-tag{color:#B9B2A0}
+.build-conclusion{margin:0;font-size:.9rem;color:#2F6B57}
